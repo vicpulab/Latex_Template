@@ -1,0 +1,88 @@
+% New commands
+% Equation derivative
+\renewcommand{\d}{\mathrm{d}}
+% Intracellular (int) sub-index command
+\newcommand{\intra}[1]{#1_{\mathrm{int}}}
+% Extracellular (ext) sub-index command
+\newcommand{\extra}[1]{#1_{\mathrm{ext}}}
+% Maximum (max) sub-index command
+\renewcommand{\max}[1]{#1_{\mathrm{max}}}
+% Time command (t)
+\renewcommand{\t}{\ensuremath{\left(t\right)}}
+% Parenthesis command ()
+\newcommand{\p}[1]{\ensuremath{\left(#1\right)}}
+% Change textwidth
+\textwidth = 410pt
+% Change left margin
+\oddsidemargin = 20pt
+% Change size of section font
+%\sectionfont{\fontsize{12}{15}\selectfont}
+% New command for partial fractions
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+% New command for make single words look like code
+\newcommand{\code}[1]{\texttt{#1}}
+% New command for make single words look like bold code
+\newcommand{\codebf}[1]{\textbf{\code{#1}}}
+% No separation before itemize
+\setlist{nolistsep}
+
+
+% Change characteristics of lstlisting (code) in latex
+\definecolor{mGreen}{rgb}{0,0.6,0}
+\definecolor{mGray}{rgb}{0.5,0.5,0.5}
+\definecolor{mPurple}{rgb}{0.58,0,0.82}
+\definecolor{backgroundColour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{CStyle}{
+    backgroundcolor=\color{backgroundColour},   
+    commentstyle=\color{mGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{mGray},
+    stringstyle=\color{mPurple},
+    basicstyle=\small,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    language=C
+}
+
+% Define Ubuntu Style for the console
+\definecolor{mygreen}{rgb}{0,0.6,0}
+\definecolor{mygray}{rgb}{0.5,0.5,0.5}
+\definecolor{mymauve}{rgb}{0.58,0,0.82}
+\definecolor{terminalbgcolor}{HTML}{330033}
+\definecolor{terminalrulecolor}{HTML}{000099}
+\lstdefinestyle{Ubuntu}{
+	backgroundcolor=\color{terminalbgcolor},
+	basicstyle=\color{white}\fontfamily{fvm}\footnotesize\selectfont,
+	breakatwhitespace=false,  
+	breaklines=true,
+	captionpos=b,
+	commentstyle=\color{mygreen},
+	deletekeywords={...},
+	escapeinside={\%*}{*)},
+	extendedchars=true,
+	frame=single,
+	keepspaces=true,
+	keywordstyle=\color{blue},
+	%language=none,
+	morekeywords={*,...},
+	numbers=none,
+	numbersep=5pt,
+  framerule=2pt,
+	numberstyle=\color{mygray}\tiny\selectfont,
+	rulecolor=\color{terminalrulecolor},
+	showspaces=false,
+	showstringspaces=false,
+	showtabs=false,
+	stepnumber=2,
+	stringstyle=\color{mymauve},
+	tabsize=2
+}
